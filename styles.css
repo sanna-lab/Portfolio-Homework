@@ -13,3 +13,69 @@ h1 {
     letter-spacing: -3px;
     line-height: 1.5;
 }
+
+h2 {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
+
+h3 {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
+
+h4 {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
+
+h5 {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
+
+h6 {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
+
+p {
+    max-width: 500px;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    color: #cad9f5;
+    letter-spacing: -3px;
+    line-height: 1.5;
+}
