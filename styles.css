@@ -108,3 +108,66 @@ a {
     color: #9cb2e8;
     text-decoration: underline;
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your layout */
+    margin: 0 auto; /* Centers the carousel horizontally */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth slide transition */
+}
+
+.slide {
+    min-width: 100%;
+    display: none; /* Hide all slides by default */
+}
+
+.slide.active {
+    display: block; /* Show only the active slide */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: #cad9f5; /* Match your site's color scheme */
+}
