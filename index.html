@@ -15,46 +15,51 @@ I want to do it by myself, even if it takes more time.
 -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        let currentIndex = 0;
+        const carousels = document.querySelectorAll('.carousel');
+        carousels.forEach(carousel => {
+            const slides = carousel.querySelectorAll('.slide');
+            const indicators = carousel.querySelectorAll('.indicator');
+            const prevBtn = carousel.querySelector('.prev');
+            const nextBtn = carousel.querySelector('.next');
+            let currentIndex = 0;
 
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(ind => ind.classList.remove('active'));
-            slides[index].classList.add('active');
-            indicators[index].classList.add('active');
-            currentIndex = index;
-        }
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(ind => ind.classList.remove('active'));
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentIndex = index;
+            }
 
-        function nextSlide() {
-            const nextIndex = (currentIndex + 1) % slides.length;
-            showSlide(nextIndex);
-        }
+            function nextSlide() {
+                const nextIndex = (currentIndex + 1) % slides.length;
+                showSlide(nextIndex);
+            }
 
-        function prevSlide() {
-            const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-            showSlide(prevIndex);
-        }
+            function prevSlide() {
+                const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
 
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
 
-        indicators.forEach((ind, index) => {
-            ind.addEventListener('click', () => showSlide(index));
+            indicators.forEach((ind, index) => {
+                ind.addEventListener('click', () => showSlide(index));
+            });
+
+            // Optional: Auto-play every 3 seconds
+            setInterval(nextSlide, 3000);
         });
-
-        // Optional: Auto-play every 3 seconds
-        setInterval(nextSlide, 3000);
     });
 </script>
 <body>
     <h1>Welcome to my Portfolio!</h1>
 
     <video width="936" height="775" autoplay muted loop>
-        <source src="clay.mov" type="video/mov">
+        <source src="clay.mp4" type="video/mp4">
+        <source src="clay.webm" type="video/webm">
+        <source src="clay.mov" type="video/quicktime">
         Your browser does not support the video tag.
     </video>
     
